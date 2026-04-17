@@ -2,9 +2,9 @@ package lesson08.constructorchallange;
 
 public class Customer {
 
-    String name;
-    double creditLimit;
-    String email;
+    private String name;
+    private double creditLimit;
+    private String email;
 
     public Customer(String name, double creditLimit, String email) {
         this.name = name;
