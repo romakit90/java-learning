@@ -1,12 +1,10 @@
 package lesson13.challangeone;
 
 public class Car extends Vehicle {
-    private int numDoors;
     private String type;
 
-    public Car(String make, String model, int year, int numDoors, String type) {
-        super(make, model, year);
-        this.numDoors = numDoors;
+    public Car(String make, String model, int year, String registrationNumber, String type) {
+        super(make, model, year, registrationNumber);
         this.type = type;
     }
 
@@ -18,5 +16,10 @@ public class Car extends Vehicle {
             case "van" -> super.getMaintenanceCost() + 150.0;
             default -> super.getMaintenanceCost();
         };
+    }
+
+    @Override
+    public String describe() {
+        return "Car:  " + super.describe() + "\nType: " + type;
     }
 }
