@@ -2,12 +2,16 @@ package lesson14.compositionchallange;
 
 public class DishWasher {
 
-    public boolean hasWorkToDo () {
+    private boolean hasWorkToDo;
 
-        return true;
+    public void setHasWorkToDo(boolean hasWorkToDo) {
+        this.hasWorkToDo = hasWorkToDo;
     }
 
     public void doDishes () {
-        System.out.println("Doing the dishes");
+        if(hasWorkToDo) {
+            System.out.println("Doing the dishes");
+            hasWorkToDo = false;
+        }
     }
 }

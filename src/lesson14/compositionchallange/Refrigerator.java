@@ -2,12 +2,16 @@ package lesson14.compositionchallange;
 
 public class Refrigerator {
 
-    public boolean hasWorkToDo () {
+    private boolean hasWorkToDo;
 
-        return true;
+    public void setHasWorkToDo(boolean hasWorkToDo) {
+        this.hasWorkToDo = hasWorkToDo;
     }
 
     public void orderFood() {
-        System.out.println("Ordering food");
+        if(hasWorkToDo) {
+            System.out.println("Ordering food");
+            hasWorkToDo = false;
+        }
     }
 }

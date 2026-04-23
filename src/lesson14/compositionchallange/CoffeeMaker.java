@@ -2,14 +2,16 @@ package lesson14.compositionchallange;
 
 public class CoffeeMaker {
 
-    public boolean hasWorkToDo () {
+    private boolean hasWorkToDo;
 
-        return false;
+    public void setHasWorkToDo(boolean hasWorkToDo) {
+        this.hasWorkToDo = hasWorkToDo;
     }
 
     public void brewCoffee () {
-        if(hasWorkToDo()) {
+        if(hasWorkToDo) {
             System.out.println("Brewing coffee");
+            hasWorkToDo = false;
         }
 
     }
