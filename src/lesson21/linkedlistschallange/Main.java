@@ -40,7 +40,8 @@ public class Main {
                 (B)ackward
                 (L)ist Places
                 (M)enu
-                (Q)uit""" + " ");
+                (Q)uit
+                Enter Value:""" + " ");
 
         boolean flag = true;
         while (flag) {
