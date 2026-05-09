@@ -1,4 +1,4 @@
-package lesson24.interfaces;
+package lesson24;
 
 public class Jet implements FlightEnabled, Trackable {
 
@@ -19,6 +19,12 @@ public class Jet implements FlightEnabled, Trackable {
 
     @Override
     public void track() {
-        System.out.println(getClass().getSimpleName() + "'s coordinates recorded");
+        System.out.println(getClass().getSimpleName() + "'s coordinates recorded'");
+    }
+
+    @Override
+    public FlightStages transition(FlightStages stage) {
+        System.out.println(getClass().getSimpleName() + " transitioning");
+        return FlightEnabled.super.transition(stage);
     }
 }
